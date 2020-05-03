@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class UserRegisterTest extends TestCase
@@ -12,7 +13,7 @@ class UserRegisterTest extends TestCase
     /**
      * @test
      */
-    public function ユーザー登録できる()
+    public function ok()
     {
         $email = 'email@example.com';
         $this->post(route('register'), [
